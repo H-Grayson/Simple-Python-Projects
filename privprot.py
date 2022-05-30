@@ -17,7 +17,6 @@ root.geometry("350x350")
 def sbutton():
     global folderChecked
     folderChecked = filedialog.askdirectory(parent=root, initialdir="/", title="Select Dir")
-    
     print(folderChecked)
         
     
@@ -29,7 +28,7 @@ def fbutton():
 
 def sortbutton():
     # if folder ends with .txt and getmtime >= 24 hours move files from folderChecked to folderTarget
-    for files in folderChecked:
+    for file in folderChecked:
         if folderChecked.endswith(".txt") and os.path.getmtime(filename) >= (time.time() - 60*60*24):
             shutil.move(os.path.join(folderChecked, filename), folderTarget)
         
