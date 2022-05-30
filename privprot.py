@@ -4,7 +4,7 @@ class Revenue:
         self._twitchRev = 0
 
     def stream1(self):
-        self.__youtubeRev1 = x
+        self.__youtubeRev = x
 
     def stream2(self):
         self._twitchRev = y
