@@ -6,13 +6,18 @@ class Revenue:
     def stream1(self):
         self.__youtubeRev = x
 
+    def getYoutubeRev(self):
+        return self.__youtubeRev
+    
     def stream2(self):
         self._twitchRev = y
 
-Youtube = Revenue("2022", 100000)
-Twitch = Revenue("2022", 20000)
+streaming = Revenue()
 
-totalRev = Youtube + Twitch
+streaming.stream1(20000)
 
-print(Youtube.youtubeRev1)
-print(Twitch._twitchRev)
+streaming.stream2(30000)
+
+totalRev = streaming.getYoutubeRev() + streaming._twitchRev
+
+print(totalRev)
